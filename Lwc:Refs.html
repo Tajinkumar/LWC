@@ -1,0 +1,23 @@
+<template>
+  <lightning-card title="Component A">
+    <div class="slds-p-around_large">
+      <lightning-layout multiple-rows>
+        <lightning-layout-item size="9">
+          <lightning-input label="Name" class="childClass"></lightning-input>
+        </lightning-layout-item>
+
+        <lightning-layout-item
+          size="2"
+          class="slds-m-left_small slds-m-top_large"
+        >
+          <lightning-button
+            label="Submit"
+            variant="brand"
+            onclick={handleClickHandler}
+          ></lightning-button>
+        </lightning-layout-item>
+      </lightning-layout>
+      <c-child-component user-name={parentUserName}></c-child-component>
+    </div>
+  </lightning-card>
+</template>
